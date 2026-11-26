@@ -10,37 +10,50 @@
              */
             try
             {
-                var cities = new Dictionary<string, string>()
+                var trns = new Dictionary<string, string>()
 {
-        {"UK", "London, Manchester, Birmingham"},
-        {"USA", "Chicago, New York, Washington"},
-        {"India", "Mumbai, New Delhi, Pune"}
+        {"Thank you", "Salamat"},
+        {"Expensive", "Mahal"},
+        {"How much", "Magkano"},
+        {"Thirsty", "Nauuhaw"},
+        {"Hungry", "Gutom"},
+        {"Sorry", "Pasensya"},
+        {"Yes", "Oo"},
+        {"No", "Hindi"},
+        {"Leave", "Alis"},
+        {"Goodbye", "Paalam"}
 };
                 string choice = "i";
                 while (choice != "N") {
 
                     Console.WriteLine("AVAILABLE WORDS:");
-                    Console.WriteLine("- ASDF");
-                    Console.WriteLine("- ");
-                    Console.WriteLine("- ");
-                    Console.WriteLine("- ");
-                    Console.WriteLine("- ");
-                    Console.WriteLine("- ");
-                    Console.WriteLine("- ");
-                    Console.WriteLine("- ");
-                    Console.WriteLine("- ");
-                    Console.WriteLine("- ");
+                    Console.WriteLine("- Thank you");
+                    Console.WriteLine("- Expensive");
+                    Console.WriteLine("- How much");
+                    Console.WriteLine("- Thirsty");
+                    Console.WriteLine("- Hungry");
+                    Console.WriteLine("- Sorry");
+                    Console.WriteLine("- Yes");
+                    Console.WriteLine("- No");
+                    Console.WriteLine("- Leave");
+                    Console.WriteLine("- Goodbye");
                     Console.WriteLine("");
                     Console.Write("Enter the English world to translate: ");
                     string word = Console.ReadLine();
                     Console.WriteLine("");
-                    Console.WriteLine("Translation");
-
-
-
-
+                    if (trns.ContainsKey(word))
+                    {
+                        Console.WriteLine($"Translation: {trns[word]}");
+                    }
+                    else { Console.WriteLine("Unavailable Word."); }
+                    Console.WriteLine("");
+                    Console.Write("Do you want to translate another word? (Y/N): ");
+                    choice = Console.ReadLine();
 
                 }
+                Console.WriteLine("");
+                Console.WriteLine("left the program");
+
 
 
             }
